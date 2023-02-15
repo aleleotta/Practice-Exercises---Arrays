@@ -18,15 +18,26 @@ public class Functions {
 	}
 	
 	public static int[] gameSetter(int array[], char array1[]) { //This function will set the game to allow the player to play.
+		Scanner sc = new Scanner(System.in);
 		System.out.println("Welcome to MineSweeper!\n"
 				+ "The player has to pick every box that doesn't have in it in order to win.\n"
 				+ "Every time the player picks a box without a mine, a hint number will be shown telling if there are any mines nearby.\n"
 				+ "If the player picks a box with a mine, the game is lost!\n"
 				+ "Good Luck!");
-		for(int i = 0, turn = 1; i < array.length; i++, turn++) {
+		for(int turn = 1, index = 0; turn < array.length + 1; turn++, index++) {
 			System.out.println("Turn " + turn + "\n");
 			System.out.print("Pick a box to uncover: \n\n");
+			int chosenBox = sc.nextInt();
 			System.out.println(Arrays.toString(array));
+			for(int index1 = 0; index1 < array.length; index1++ ) {
+				chosenBox = array[index1];
+			}
+			if(array1[index] == '*') {
+				System.out.println("\n\n\nYou lost.\nBetter luck next time!\n");
+				break;
+			}
+			if(array1[index] == ' ') {
+			}
 		}
 		return array;
 	}
