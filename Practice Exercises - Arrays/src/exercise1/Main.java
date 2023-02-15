@@ -7,6 +7,7 @@ public class Main {
 		int playerVisible[] = new int[20];
 		Scanner sc = new Scanner(System.in);
 		mineSetter = Functions.placeMines(mineSetter);
+		playerVisible = Functions.gameSetter(playerVisible, mineSetter);
 		System.out.println(Arrays.toString(mineSetter));
 		sc.close();
 	}
