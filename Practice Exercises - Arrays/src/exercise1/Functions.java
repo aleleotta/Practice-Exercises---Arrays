@@ -2,14 +2,27 @@ package exercise1;
 import java.util.*;
 
 public class Functions {
-	
-	public static char[] placeMines(char array[]){ //To modify!
+
+	public static char[] placeMines(char array[]){
 		for(int index = 0; index < array.length; index++) {
+			int denyRepeat = 0;
 			int randomIndex = (int) (Math.random() * 20);
-			if(index < 6) {
-				array[randomIndex] = '*';
+			if(index <= 6) {
+				if(randomIndex != denyRepeat) {
+					array[randomIndex] = '*';
+				}
+				denyRepeat = randomIndex;
 			}
 		}
+		return array;
+	}
+	
+	public static int[] gameSetter(int array[], char array1[]) {
+		System.out.println("Welcome to MineSweeper!\n"
+				+ "The player has to pick every box that doesn't have in it in order to win.\n"
+				+ "Every time the player picks a box without a mine, a hint number will be shown telling if there are any mines nearby.\n"
+				+ "If the player picks a box with a mine, the game is lost!\n"
+				+ "Good Luck!");
 		return array;
 	}
 }
