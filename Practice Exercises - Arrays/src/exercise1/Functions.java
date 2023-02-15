@@ -4,10 +4,10 @@ import java.util.*;
 public class Functions {
 	
 	public static char[] placeMines(char array[]){ //To modify!
-		for(int i = 0; i < array.length; i++) {
-			int j = (int) (Math.random() * 20);
-			if(i <= 6) {
-				array[j] = '*';
+		for(int index = 0; index < array.length; index++) {
+			int randomIndex = (int) (Math.random() * 20);
+			if(index < 6) {
+				array[randomIndex] = '*';
 			}
 		}
 		return array;
