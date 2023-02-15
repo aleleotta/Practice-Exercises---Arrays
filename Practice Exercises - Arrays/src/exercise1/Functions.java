@@ -2,6 +2,13 @@ package exercise1;
 import java.util.*;
 
 public class Functions {
+	
+	public static int[] fillArray(int array[]){ //To modify!
+		for(int i = 0; i < array.length; i++) {
+			array[i] = 10 * i;
+		}
+		return array;
+	}
 }
 /*Realizaremos el juego del buscaminas con un array unidimensional.
 El juego nos proporcionará pistas, de forma que si destapamos una casilla y no hay una mina,
