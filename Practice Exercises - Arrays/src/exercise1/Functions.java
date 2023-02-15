@@ -5,7 +5,7 @@ public class Functions {
 	
 	public static char[] placeMines(char array[]){ //To modify!
 		for(int i = 0; i < array.length; i++) {
-			int j = (int) (Math.random() * 21);
+			int j = (int) (Math.random() * 20);
 			if(i <= 6) {
 				array[j] = '*';
 			}
