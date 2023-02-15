@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Main {
 	public static void main(String[] args) {
-		int table[] = new int[20];
+		int mineSetter[] = new int[20];
 		Scanner sc = new Scanner(System.in);
 		sc.close();
 	}
