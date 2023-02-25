@@ -8,7 +8,6 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		mineSetter = Functions.placeMines(mineSetter);
 		playerVisible = Functions.gameSetter(playerVisible, mineSetter);
-		System.out.println(Arrays.toString(mineSetter));
 		sc.close();
 	}
 }

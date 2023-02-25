@@ -23,9 +23,10 @@ public class Functions {
 				+ "The player has to pick every box that doesn't have in it in order to win.\n"
 				+ "Every time the player picks a box without a mine, a hint number will be shown telling if there are any mines nearby.\n"
 				+ "If the player picks a box with a mine, the game is lost!\n"
-				+ "Good Luck!");
-		for(int turn = 1, index = 0; turn < array.length + 1; turn++, index++) {
+				+ "Good Luck!\n");
+		for(int turn = 1, index = 0; turn < array.length + 1; turn++) {
 			System.out.println("Turn " + turn + "\n");
+			System.out.println(Arrays.toString(array1));
 			System.out.print("Pick a box to uncover: \n\n");
 			int chosenBox = sc.nextInt();
 			System.out.println(Arrays.toString(array));
@@ -34,10 +35,11 @@ public class Functions {
 			}
 			if(array1[index] == '*') {
 				System.out.println("\n\n\nYou lost.\nBetter luck next time!\n");
+				System.out.println(Arrays.toString(array1));
 				break;
 			}
-			if(array1[index] == ' ') {
-			}
+			System.out.println("You win! These were the mines that you avoided.");
+			System.out.println(Arrays.toString(array1));
 		}
 		return array;
 	}
